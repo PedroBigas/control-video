@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container{
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        .video{
+            width: 100%;
+        }
+
+        .controles{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        /*    background-color: red; */
+            text-align: center;
+        }
+
+        .btn{
+            position: relative;
+            width: 30px ;
+            padding: 10px;
+            top: 100%;
+            transform: translateY(-100%);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <video class="video" id="video1" src="./assets/MÃE PASSOU MAL NA FINAL DA LIBERTADORES.mp4" poster="./assets/roxao.jpg">
+
+        </video>
+        
+        <div class="controles" id="controles" onmouseout="sumir()" onmouseover="mostrar()">
+            <img class="btn" onclick="retroceder()" src="./assets/skip-back.svg">
+            <img class="btn" onclick="diminuirVel()" src="./assets/decrease.svg">
+            <img class="btn" onclick="play()" src="./assets/play-circle.svg">
+            <img class="btn" onclick="stop()" src="./assets/stop.svg">
+            <img class="btn" onclick="aumentarVel()" src="./assets/increase.svg">
+            <img class="btn" onclick="avancar()" src="./assets/skip-forward.svg">
+        </div>
+    
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
